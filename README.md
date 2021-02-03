@@ -1,27 +1,21 @@
-# Authapp
+# Que aprenderemos en esta seccion?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
+A continuacion trabajaremos con una aplicacion que tendra como finalidad, utilizar el sistema de autenticacion de usuarios Auth0.
 
-## Development server
+Tras concluirla aprenderemos mucho sobre:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	- Que es Auth0 y la documentacion basada en Angular 2?
+	- Autenticacion con facebook, twitter, google entre otros.
+	- Creacion de un formulario de captura para la creacion de los usuarios.
+	- Personalizacion de la caja de login.
+	- Uso de servicios para bloquear rutas que no son validas si el usuario no esta autenticado.
+	- Obtener informacion del perfil del usuario ingresado.
+	- Entre otras cosas utiles para nuestras aplicaciones.
 
-## Code scaffolding
+`ng g c components/navbar -is --skipTests` Genera componente -is indica que los estilos estan inline, --skiptests inidca que no se cree archivo de tests
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`ng g guard services/auth` Genera un guard que previene el acceso a la ruta protegida si se conoce la ruta, pregunta lo siguiente:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+	-CanActivate: Cuando no trabajamos con lazyload.
+	-CanActivateChild: Por si acaso es ruta principal tiene rutas hijas.
+	-CanLoad: Cuando usamos lazyload.
